@@ -22,11 +22,7 @@ public class CustomerController {
     }
     @PostMapping
     public String saveCustomer(@RequestBody CustomerRequest customerRequest) {
-        Customer customer = new Customer();
-        customer.setName(customerRequest.name());
-        customer.setEmail(customerRequest.email());
-        customer.setAge(customerRequest.age());
-        return customerService.saveCustomer(customer);
+        return customerService.saveCustomer(customerRequest);
     }
 
     @DeleteMapping("{id}")
