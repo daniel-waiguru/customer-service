@@ -21,4 +21,8 @@ public class CustomerService {
     public String saveCustomer(Customer customer) {
         return customerRepository.save(customer).getName();
     }
+
+    public void deleteCustomer(Integer id) {
+        customerRepository.deleteById(id);
+    }
 }
